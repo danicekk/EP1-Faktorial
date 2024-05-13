@@ -17,10 +17,14 @@ Module Program
 
         If cislo > 10 Then
             Console.WriteLine(" èíslo musí být menší ")
+            Console.ReadKey()
+            End
         End If
 
         If cislo = 1 > 0 Then
             Console.WriteLine(" minimální zadané èíslo mùže být ")
+            Console.ReadKey()
+            End
         End If
 
     End Sub
