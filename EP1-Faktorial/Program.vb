@@ -13,6 +13,9 @@ Module Program
             Console.WriteLine(" èíslo musí být menší ")
         End If
 
+        If cislo = 1 > 0 Then
+            Console.WriteLine(" minimální zadané èíslo mùže být ")
+        End If
 
     End Sub
 End Module
