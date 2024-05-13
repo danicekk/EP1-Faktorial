@@ -2,11 +2,17 @@ Imports System
 
 Module Program
   Sub Main(args As String())
-        Dim cislo As Integer
+        Dim cislo As Object
         Dim vysledek As Integer
 
-        If cislo = String Then
+        Console.WriteLine("Zadej èíslo")
+
+        cislo = Console.ReadLine
+
+        If Not IsNumeric(cislo) Then
             Console.WriteLine(" Vstup musí být èíslo ")
+            Console.ReadKey()
+            End
         End If
 
         If cislo > 10 Then
