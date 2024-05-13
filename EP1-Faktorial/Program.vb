@@ -2,14 +2,13 @@ Imports System
 
 Module Program
     Sub Main(args As String())
-        Dim cislo As Object
-        Dim vysledek As Integer = 1
+        Dim cislo As Integer
+        Dim vysledek As Integer
 
 
 
 
-        Do
-            Console.WriteLine("Zadej èíslo")
+        Console.WriteLine("Zadej èíslo")
             cislo = Console.ReadLine
 
             If Not IsNumeric(cislo) Then
@@ -25,17 +24,18 @@ Module Program
             End If
 
             If cislo < 0 Then
-                Console.WriteLine(" minimální zadané èíslo mùže být ")
-                Console.ReadKey()
+            Console.WriteLine(" minimální zadané èíslo musí být 1")
+            Console.ReadKey()
                 End
             End If
-        Loop
+
+
+
+        Console.WriteLine($"faktoriál zadaného èísla {cislo} je {vysledek}")
 
         For i = 1 To cislo
             vysledek = cislo * (cislo - i)
         Next
-
-        Console.WriteLine($"fraktál od 10 do 1 cislo={cislo} je {vysledek}")
 
     End Sub
 End Module
