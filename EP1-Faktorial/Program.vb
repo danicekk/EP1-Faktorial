@@ -1,4 +1,5 @@
 Imports System
+Imports System.Numerics
 Imports System.Security.Cryptography
 
 Module Program
@@ -8,7 +9,7 @@ Module Program
 
         Console.WriteLine("Zadej èíslo")
         cislo = Console.ReadLine
-
+        
 
         If Not IsNumeric(cislo) Then
             Console.WriteLine(" Vstup musí být èíslo ")
