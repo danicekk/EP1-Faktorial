@@ -1,15 +1,14 @@
 Imports System
+Imports System.Security.Cryptography
 
 Module Program
     Sub Main(args As String())
-        Dim cislo As Integer
-        Dim vysledek As Integer
-
-
-
-
-        Console.WriteLine("Zadej èíslo")
+        Dim cislo As Object
+        Dim vysledek As Integer = 1
+        Do
+            Console.WriteLine("Zadej èíslo")
             cislo = Console.ReadLine
+
 
             If Not IsNumeric(cislo) Then
                 Console.WriteLine(" Vstup musí být èíslo ")
@@ -24,19 +23,26 @@ Module Program
             End If
 
             If cislo < 0 Then
-            Console.WriteLine(" minimální zadané èíslo musí být 1")
-            Console.ReadKey()
+                Console.WriteLine(" minimální zadané èíslo musí být 1")
+                Console.ReadKey()
                 End
             End If
 
 
+            For i As Integer = 1 To cislo
+                vysledek *= i
+            Next
+        Loop
+
 
         Console.WriteLine($"faktoriál zadaného èísla {cislo} je {vysledek}")
 
-        For i = 1 To cislo
-            vysledek = cislo * (cislo - i)
-        Next
+
+
 
     End Sub
 End Module
+
+
+
 
